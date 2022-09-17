@@ -7,13 +7,13 @@ class Usuario{
     mascotas = [];
 
     getFullName() {
-        return `${this.nombre} ${this.apellido}`
+        return `${usuario.nombre} ${usuario.apellido}`
     }
     addMascota(string){
         this.mascotas.push(string);
     }
     countMascotas(){
-        this.mascotas;
+        return this.mascotas.length
     }
     addBook(string, string1){
         this.libros.push({nombre: string, autor: string1})
@@ -25,10 +25,12 @@ class Usuario{
 
 let usuario = new Usuario("Eva", "Quinteros");
 usuario.getFullName();
-usuario.addMascota("Gato")
+usuario.addMascota("Gato");
 usuario.addMascota("Perro");
 usuario.countMascotas();
 usuario.addBook("Encuentros", "El principito");
 usuario.getBookNames();
 
 console.log(usuario);
+console.log(usuario.countMascotas())
+console.log(usuario.getFullName());
